@@ -32,12 +32,46 @@ android {
 }
 
 dependencies {
+    // android support
+    implementation "com.android.support:support-annotations:$rootProject.supportLibraryVersion"
+    implementation "com.android.support:support-v4:$rootProject.supportLibraryVersion"
+    implementation "com.android.support:appcompat-v7:$rootProject.supportLibraryVersion"
+
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     testImplementation "junit:junit:$rootProject.ext.junitVersion"
     androidTestImplementation "com.android.support.test:runner:$rootProject.runnerVersion"
     androidTestImplementation "com.android.support.test.espresso:espresso-core:$rootProject.espressoVersion"
-    // MVP
-    implementation "com.android.support:support-annotations:$rootProject.supportLibraryVersion"
+
+    // amlzq support
+    implementation "com.amlzq.android:utils:$rootProject.ext.utilsVersion"
+    implementation "com.amlzq.android:ui:$rootProject.ext.uiVersion"
+    implementation "com.amlzq.android:log:$rootProject.ext.logVersion"
+
+    // google arch library
+    api 'android.arch.persistence.room:runtime:1.1.1'
+    annotationProcessor "android.arch.persistence.room:compiler:1.1.1"
+    api "android.arch.persistence.room:rxjava2:1.1.1"
+//    api 'android.arch.persistence.room:testing:1.1.1'
+
+    // explicitly depend on RxJava's latest version for bug fixes and new features.
+    api 'io.reactivex.rxjava2:rxjava:2.2.4'
+    // Because RxAndroid releases are few and far between, it is recommended you also
+    api 'io.reactivex.rxjava2:rxandroid:2.1.0'
+
+    api('com.hwangjr.rxbus:rxbus:2.0.1') {
+        exclude group: 'io.reactivex', module: 'rxjava'
+        exclude group: 'io.reactivex', module: 'rxandroid'
+        exclude group: 'com.android.support', module: 'support-annotations'
+        exclude group: 'com.jakewharton.timber', module: 'timber'
+    }
+
+    api 'com.github.tbruyelle:rxpermissions:0.10.2@aar'
+    api 'com.jakewharton.rxbinding2:rxbinding:2.2.0@aar'
+
+    api 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+
+
 }
 
 // 以下是发布到远程 jCenter 仓库配置
@@ -59,10 +93,10 @@ dependencies {
 //    userOrg = 'amlzq' // 组织用户名
 //    repoName = 'android-support-architecture' // maven类型仓库名称
 //    groupId = 'com.amlzq.android' //
-//    artifactId = 'mvp'
+//    artifactId = 'mvp-rxjava'
 //    publishVersion = android.defaultConfig.versionName
 //    desc = 'android support api mvp architecture'
-//    website = 'https://github.com/amlzq/android-support-architecture/tree/android-support-mvp'
+//    website = 'https://github.com/amlzq/android-support-architecture/tree/android-support-mvp-rxjava'
 //    repository = 'https://github.com/amlzq/android-support-architecture.git'
 //}
 
@@ -77,7 +111,7 @@ uploadArchives {
     repositories.mavenDeployer {
         repository(url: properties.getProperty("mavenLocal"))
         pom.groupId = "com.amlzq.android"
-        pom.artifactId = "mvp"
+        pom.artifactId = "mvp-rxjava"
         pom.version = android.defaultConfig.versionName
     }
 }

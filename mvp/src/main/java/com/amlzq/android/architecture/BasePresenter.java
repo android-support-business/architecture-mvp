@@ -18,10 +18,8 @@ package com.amlzq.android.architecture;
 
 public interface BasePresenter {
 
-    void start();
+    void subscribe();
 
-    void result(int requestCode, int resultCode);
-
-    void destroy();
+    void unsubscribe();
 
 }

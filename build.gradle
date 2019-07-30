@@ -1,6 +1,5 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 buildscript {
-
     repositories {
         mavenLocal()
         jcenter()
@@ -22,6 +21,7 @@ allprojects {
         // If you're using a version of Gradle lower than 4.1, you must instead use:
         // maven { url "https://maven.google.com" }
         // An alternative URL is 'https://dl.google.com/dl/android/maven2/'
+        maven { url "https://jitpack.io" }
     }
     gradle.projectsEvaluated {// 显示打包错误的详细信息
         tasks.withType(JavaCompile) {
@@ -52,4 +52,9 @@ ext {
     runnerVersion = '1.0.2'
     rulesVersion = '0.5'
     espressoVersion = '3.0.2'
+
+    // amlzq library，Multiple module use
+    logVersion = '1.0.4'
+    utilsVersion = '1.0.4'
+    uiVersion = '1.0.3'
 }

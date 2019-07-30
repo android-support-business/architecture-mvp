@@ -16,14 +16,14 @@
 
 package com.amlzq.android.architecture;
 
-public interface BaseView<T extends BasePresenter> {
+public interface BaseView<P> {
 
-    void setPresenter(T presenter);
-
-    boolean isActive();
+    void setPresenter(P presenter);
 
     void setLoadingIndicator(boolean active);
 
-    void showLoadingError(String message);
+    void showLoadingError(String msg);
+
+    boolean isActive();
 
 }
