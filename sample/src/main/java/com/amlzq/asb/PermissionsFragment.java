@@ -100,4 +100,9 @@ public class PermissionsFragment extends BaseFragment {
 
     }
 
+    @Override
+    public boolean onBackPressed() {
+        return false;
+    }
+
 }

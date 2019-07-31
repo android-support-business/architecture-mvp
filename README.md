@@ -1,13 +1,13 @@
-# android-support-mvp-rxjava
-- [Take for android-architecture](https://github.com/googlesamples/android-architecture/tree/todo-mvp-rxjava)
+# android-support-mvp-plus
+- [Take for android-architecture](https://github.com/googlesamples/android-architecture)
 
 ### 发布
 - 因为依赖太多第三方库，会导致频繁更新，所以不发布到jcenter。
 - 可发布到本地maven中，执行`gradlew uploadArchives`。
 
 ### 工程结构
-* ./mvp-rxjava
-> mvp-rxjava library
+* ./mvp
+> mvp library
 ```
 package: com.amlzq.android.architecture
 ```
@@ -15,8 +15,8 @@ package: com.amlzq.android.architecture
 > sample application
 ```
 package: com.amlzq.asb
-appName: MVP-RxJava支持库
-applicationId: com.amlzq.asb.mvprxjava
+appName: MVP-Plus支持库
+applicationId: com.amlzq.asb.mvp.plus
 ```
 
 ### 重点
@@ -57,7 +57,7 @@ EventBus
 ButterKnife
 ```
 
-- RxJava/RxAndroid
+- RxJava&RxAndroid
 ```
 ActionN 和 FuncN 遵循Java 8的命名规则。
 其中，Action0 改名成Action，Action1改名成Consumer，而Action2改名成了BiConsumer，而Action3 - Action9都不再使用了，ActionN变成了Consumer<Object[]>。

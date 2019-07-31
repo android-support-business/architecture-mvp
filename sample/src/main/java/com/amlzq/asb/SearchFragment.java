@@ -87,5 +87,9 @@ public class SearchFragment extends BaseFragment {
                 });
     }
 
+    @Override
+    public boolean onBackPressed() {
+        return false;
+    }
 
 }

@@ -64,6 +64,11 @@ public class HomeFragment extends BaseFragment {
 
     }
 
+    @Override
+    public boolean onBackPressed() {
+        return false;
+    }
+
     @SuppressLint("CheckResult")
     @OnClick(R.id.btn_action)
     public void onActionEvent(View view) {

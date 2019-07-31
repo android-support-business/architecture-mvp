@@ -61,8 +61,11 @@ public class RxBindingFragment extends BaseFragment {
                         showToastShort("按钮被点击了");
                     }
                 });
+    }
 
-
+    @Override
+    public boolean onBackPressed() {
+        return false;
     }
 
 }
