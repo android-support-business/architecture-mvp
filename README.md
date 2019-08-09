@@ -138,3 +138,4 @@ ButterKnife注入控件, RxBinding异步监听事件
 ### 其他优秀的框架
 - [todo-mvp-rxjava](https://github.com/googlesamples/android-architecture/tree/todo-mvp-rxjava)
 - [MVPArms](https://github.com/JessYanCoding/MVPArms)
+- [MVP项目实践](https://juejin.im/entry/57d22b79a22b9d006c4720ee)
