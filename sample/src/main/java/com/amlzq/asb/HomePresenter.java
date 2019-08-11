@@ -1,12 +1,13 @@
 package com.amlzq.asb;
 
+import android.content.Intent;
+
 import com.amlzq.android.architecture.BasePresenter;
 
 /**
- * Created by amlzq on 2018/9/27.
+ *
  */
-
-public class MainPresenter implements BasePresenter {
+public class HomePresenter implements BasePresenter {
 
     @Override
     public void start() {
@@ -14,7 +15,7 @@ public class MainPresenter implements BasePresenter {
     }
 
     @Override
-    public void result(int requestCode, int resultCode) {
+    public void result(int requestCode, int resultCode, Intent data) {
 
     }
 

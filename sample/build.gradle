@@ -25,10 +25,28 @@ android {
 }
 
 dependencies {
+    // google support library
+    implementation "com.android.support:support-v4:${rootProject.ext.supportLibraryVersion}"
+    implementation "com.android.support:appcompat-v7:${rootProject.ext.supportLibraryVersion}"
+    implementation "com.android.support:support-annotations:$rootProject.supportLibraryVersion"
+    implementation "com.android.support:recyclerview-v7:${rootProject.ext.supportLibraryVersion}"
+    implementation "com.android.support:cardview-v7:${rootProject.ext.supportLibraryVersion}"
+    implementation "com.android.support:design:${rootProject.ext.supportLibraryVersion}"
+    implementation "com.android.support:support-vector-drawable:${rootProject.ext.supportLibraryVersion}"
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation 'com.android.support:multidex:1.0.3'
+
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     testImplementation "junit:junit:$rootProject.ext.junitVersion"
     androidTestImplementation "com.android.support.test:runner:$rootProject.runnerVersion"
     androidTestImplementation "com.android.support.test.espresso:espresso-core:$rootProject.espressoVersion"
-    //    implementation "com.android.support:appcompat-v7:$rootProject.supportLibraryVersion"
+
     implementation project(':mvp')
+
+    // amlzq support library remote dependencies
+    implementation "com.amlzq.android:log:${rootProject.ext.logVersion}"
+    implementation "com.amlzq.android:annotations:${rootProject.ext.annotationsVersion}"
+    implementation "com.amlzq.android:utils:${rootProject.ext.utilsVersion}"
+    implementation "com.amlzq.android:ui:$rootProject.ext.uiVersion"
+    implementation "com.amlzq.android:io:$rootProject.ext.ioVersion"
 }

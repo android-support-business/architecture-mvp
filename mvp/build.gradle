@@ -32,12 +32,12 @@ android {
 }
 
 dependencies {
+    implementation "com.android.support:support-annotations:$rootProject.supportLibraryVersion"
+
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     testImplementation "junit:junit:$rootProject.ext.junitVersion"
     androidTestImplementation "com.android.support.test:runner:$rootProject.runnerVersion"
     androidTestImplementation "com.android.support.test.espresso:espresso-core:$rootProject.espressoVersion"
-    // MVP
-    implementation "com.android.support:support-annotations:$rootProject.supportLibraryVersion"
 }
 
 // 以下是发布到远程 jCenter 仓库配置

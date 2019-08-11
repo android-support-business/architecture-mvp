@@ -1,13 +1,5 @@
 # android-support-mvp
-* dependencies Android API 27 Platform
-* dependencies JDK
 * Extracted from [android-architecture-mvp](https://github.com/googlesamples/android-architecture/tree/todo-mvp)
-
-## MVP
-```
-MVP
-EventBus
-```
 
 ## 发布
 * 最新版本

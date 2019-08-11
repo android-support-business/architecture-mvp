@@ -1,51 +1,23 @@
 package com.amlzq.asb;
 
-import android.app.Activity;
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 
-import com.amlzq.android.architecture.BaseListView;
-import com.amlzq.android.architecture.BasePresenter;
-
-public class MainActivity extends Activity implements BaseListView {
+public class MainActivity extends FragmentActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        FragmentManager manager = getSupportFragmentManager();
+        FragmentTransaction transaction = manager.beginTransaction();
+        HomeFragment fragment = HomeFragment.newInstance();
+        new HomePresenter();
+        transaction.add(R.id.fragment_container, fragment);
+        transaction.commit();
     }
 
-    @Override
-    public void loadMoreEnd() {
-
-    }
-
-    @Override
-    public void loadMoreComplete() {
-
-    }
-
-    @Override
-    public void loadMoreFail() {
-
-    }
-
-    @Override
-    public void setPresenter(BasePresenter presenter) {
-
-    }
-
-    @Override
-    public boolean isActive() {
-        return false;
-    }
-
-    @Override
-    public void setLoadingIndicator(boolean active) {
-
-    }
-
-    @Override
-    public void showLoadingError(String message) {
-
-    }
 }

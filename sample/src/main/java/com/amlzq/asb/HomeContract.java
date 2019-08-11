@@ -14,16 +14,23 @@
  * limitations under the License.
  */
 
-package com.amlzq.android.architecture;
+package com.amlzq.asb;
 
-import android.content.Intent;
+import com.amlzq.android.architecture.BasePresenter;
+import com.amlzq.android.architecture.BaseView;
 
-public interface BasePresenter {
+/**
+ * This specifies the contract between the view and the presenter.
+ * 这指定了视图和演示者之间的契约。
+ */
+public interface HomeContract {
 
-    void start();
+    interface View extends BaseView<Presenter> {
 
-    void result(int requestCode, int resultCode, Intent data);
+    }
 
-    void destroy();
+    interface Presenter extends BasePresenter {
+
+    }
 
 }
