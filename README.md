@@ -22,7 +22,7 @@ applicationId: com.amlzq.asb.mvp.plus
 ### 重点
 - [Retrofit自定义GsonConverter处理所有请求错误情况](https://www.jianshu.com/p/5b8b1062866b)
 
-### MVP-RxJava
+### mvp-plus
 - 拥抱注解式编程
 - 拥抱响应式编程
 - 拥抱强大且知名的第三方SDK(JakeWharton/Square/GreenroBot)

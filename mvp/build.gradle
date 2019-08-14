@@ -93,10 +93,10 @@ dependencies {
 //    userOrg = 'amlzq' // 组织用户名
 //    repoName = 'android-support-architecture' // maven类型仓库名称
 //    groupId = 'com.amlzq.android' //
-//    artifactId = 'mvp-rxjava'
+//    artifactId = 'mvp-plus'
 //    publishVersion = android.defaultConfig.versionName
 //    desc = 'android support api mvp architecture'
-//    website = 'https://github.com/amlzq/android-support-architecture/tree/android-support-mvp-rxjava'
+//    website = 'https://github.com/amlzq/android-support-architecture/tree/android-support-mvp-plus'
 //    repository = 'https://github.com/amlzq/android-support-architecture.git'
 //}
 
@@ -111,7 +111,7 @@ uploadArchives {
     repositories.mavenDeployer {
         repository(url: properties.getProperty("mavenLocal"))
         pom.groupId = "com.amlzq.android"
-        pom.artifactId = "mvp-rxjava"
+        pom.artifactId = "mvp-plus"
         pom.version = android.defaultConfig.versionName
     }
 }

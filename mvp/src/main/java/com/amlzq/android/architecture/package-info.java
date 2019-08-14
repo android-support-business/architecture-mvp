@@ -1,5 +1,5 @@
 /**
- * mvp-rxjava architecture blueprints
+ * mvp-plus architecture blueprints
  *
  * @author amlzq
  */
