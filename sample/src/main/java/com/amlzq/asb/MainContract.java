@@ -23,7 +23,7 @@ import com.amlzq.android.architecture.BaseView;
  * This specifies the contract between the view and the presenter.
  * 这指定了视图和演示者之间的契约。
  */
-public interface HomeContract {
+public interface MainContract {
 
     interface View extends BaseView<Presenter> {
 

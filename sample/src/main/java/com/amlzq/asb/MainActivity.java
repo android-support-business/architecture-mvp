@@ -5,6 +5,8 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 
+import com.amlzq.android.architecture.schedulers.AppExecutors;
+
 public class MainActivity extends FragmentActivity {
 
     @Override
@@ -14,8 +16,8 @@ public class MainActivity extends FragmentActivity {
 
         FragmentManager manager = getSupportFragmentManager();
         FragmentTransaction transaction = manager.beginTransaction();
-        HomeFragment fragment = HomeFragment.newInstance();
-        new HomePresenter();
+        MainFragment fragment = MainFragment.newInstance();
+        new MainPresenter(fragment, new AppExecutors());
         transaction.add(R.id.fragment_container, fragment);
         transaction.commit();
     }

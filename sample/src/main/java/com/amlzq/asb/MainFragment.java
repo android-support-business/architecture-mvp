@@ -8,29 +8,41 @@ import android.view.View;
 import android.view.ViewGroup;
 
 /**
- *
+ * 视图层
  */
-public class HomeFragment extends Fragment implements HomeContract.View {
+public class MainFragment extends Fragment implements MainContract.View {
 
-    HomeContract.Presenter mPresenter;
+    MainContract.Presenter mPresenter;
 
-    public HomeFragment() {
+    public MainFragment() {
         // Required empty public constructor
     }
 
-    public static HomeFragment newInstance() {
-        return new HomeFragment();
+    public static MainFragment newInstance() {
+        return new MainFragment();
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false);
+        return inflater.inflate(R.layout.fragment_main, container, false);
     }
 
     @Override
-    public void setPresenter(HomeContract.Presenter presenter) {
+    public void onResume() {
+        super.onResume();
+        mPresenter.start();
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        mPresenter.destroy();
+    }
+
+    @Override
+    public void setPresenter(MainContract.Presenter presenter) {
         mPresenter = presenter;
     }
 
