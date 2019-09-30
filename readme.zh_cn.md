@@ -144,7 +144,7 @@ ButterKnife注入控件, RxBinding异步监听事件
 - [greenDao使用进阶](https://segmentfault.com/a/1190000009076317)
 - [Android数据库框架 greenDAO：3.2.0的使用](https://www.jianshu.com/p/cc7c1ecdfacf)
 
-### OkHttp/Retrofit
+#### OkHttp/Retrofit
 - [重拾Android之路之探究Retrofit 2.X](https://www.jianshu.com/p/5c0c546fc540)
 - [Content-Type](https://blog.csdn.net/bigtree_3721/article/details/82809459)
 
@@ -156,6 +156,10 @@ ButterKnife注入控件, RxBinding异步监听事件
 - [性能优化，还得看AspectJ](https://mp.weixin.qq.com/s/heBoKE2UqMgp4_zm_fciuA)
 - [关于android中使用AspectJ](https://www.jianshu.com/p/f577aec99e17)
 - [安卓AOP三剑客:APT,AspectJ,Javassist](https://www.jianshu.com/p/dca3e2c8608a)
+
+#### 界面适配
+- [一种极低成本的Android屏幕适配方式](https://mp.weixin.qq.com/s/d9QCoBP6kV9VSWvVldVVwA)
+- [JessYanCoding/AndroidAutoSize](https://github.com/JessYanCoding/AndroidAutoSizeJessYanCoding/AndroidAutoSize)
 
 ### 其他优秀的可替代方案
 - [todo-mvp-rxjava](https://github.com/googlesamples/android-architecture/tree/todo-mvp-rxjava)
