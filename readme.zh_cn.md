@@ -1,7 +1,5 @@
-# android-support-mvp-plus
+## 特性
 - 一个可复用的，快速搭建安卓应用开发架构的库。
-
-- 特性
 ```
 MVP分离视图和数据
 OkHttp+Retrofit实现HTTP通信

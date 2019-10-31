@@ -1,4 +1,4 @@
-package com.amlzq.android.architecture.ui;
+package com.amlzq.android.architecture.app;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -16,9 +16,9 @@ import butterknife.ButterKnife;
 import butterknife.Unbinder;
 
 /**
- * RxMVPFragment
+ * MVPFragment
  */
-public abstract class RxMVPFragment<P extends BasePresenter>
+public abstract class MVPFragment<P extends BasePresenter>
         extends BaseFragment
         implements BaseView<P> {
 

@@ -1,11 +1,11 @@
-package com.amlzq.android.architecture.ui;
+package com.amlzq.android.architecture.app;
 
 import android.os.Bundle;
 
 import com.amlzq.android.app.BaseActivity;
 import com.hwangjr.rxbus.RxBus;
 
-public class RxActivity extends BaseActivity {
+public class MVPActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
