@@ -4,6 +4,7 @@
 
     <application>
         <activity android:name="com.amlzq.android.ui.MVPActivity" />
+        <activity android:name=".app.MVPActivity" />
     </application>
 
 </manifest>

@@ -1,13 +1,58 @@
-# android-support-mvp+
-- [Take for android-architecture](https://github.com/googlesamples/android-architecture)
+## 特性
+- 一个可复用的，快速搭建安卓应用开发架构的库。
+```
+MVP分离视图和数据
+OkHttp+Retrofit实现HTTP通信
+RxJava实现多线程编程
+面向切面埋点
+测试
+```
+
+- 开发环境
+```
+AS3.2
+targetSdkVersion 28
+minSdkVersion 15
+buildToolsVersion 28.0.3
+
+google support
+amlzq support
+
+OkHttp3
+Retrofit2
+GreenDao
+EventBus
+ButterKnife
+Dagger2
+
+RxJava
+RxAndroid
+RxBinding
+RxPermissions
+RxBus
+
+Dagger2
+Retrofit2 HTTP通信库
+EventBus
+ButterKnife 组件赋值，事件
+AspectJ 性能测试，埋点
+```
+
+- 实践
+```
+拥抱注解式编程
+拥抱响应式编程
+拥抱面向切面编程
+拥抱强大且知名的第三方SDK(JakeWharton/Square/GreenRobot)
+```
 
 ### 发布
-- 因为依赖较多第三方库，会导致频繁更新，暂不发布到jcenter。
+- 因为依赖太多第三方库，会导致频繁更新，所以不发布到jcenter。
 - 可发布到本地maven中，执行`gradlew uploadArchives`。
 
 ### 工程结构
 * ./mvp
-> mvp library
+> mvp-plus library
 ```
 package: com.amlzq.android.architecture
 ```
@@ -15,49 +60,19 @@ package: com.amlzq.android.architecture
 > sample application
 ```
 package: com.amlzq.asb
-appName: MVP+支持库
+appName: MVP-Plus支持库
 applicationId: com.amlzq.asb.mvp.plus
 ```
 
-### 重点
+### 详细
+
+#### MVP
+[Take for android-architecture](https://github.com/googlesamples/android-architecture)
+
+#### HTTP通信
 - [Retrofit自定义GsonConverter处理所有请求错误情况](https://www.jianshu.com/p/5b8b1062866b)
 
-### mvp-plus
-- 拥抱注解式编程
-- 拥抱响应式编程
-- 拥抱强大且知名的第三方SDK(JakeWharton/Square/GreenroBot)
-
-- 基础SDK
-```
-google support
-amlzq support
-```
-- 第三方SDK
-```
-OkHttp3
-Retrofit2
-GreenDao
-EventBus
-ButterKnife
-Dagger2
-```
-- 响应式编程
-```
-RxJava
-RxAndroid
-RxBinding
-RxPermissions
-RxBus
-```
-- 注解式编程
-```
-Dagger2
-Retrofit2
-EventBus
-ButterKnife
-```
-
-- RxJava&RxAndroid
+#### RxJava&RxAndroid
 ```
 ActionN 和 FuncN 遵循Java 8的命名规则。
 其中，Action0 改名成Action，Action1改名成Consumer，而Action2改名成了BiConsumer，而Action3 - Action9都不再使用了，ActionN变成了Consumer<Object[]>。
@@ -127,7 +142,7 @@ ButterKnife注入控件, RxBinding异步监听事件
 - [greenDao使用进阶](https://segmentfault.com/a/1190000009076317)
 - [Android数据库框架 greenDAO：3.2.0的使用](https://www.jianshu.com/p/cc7c1ecdfacf)
 
-### OkHttp/Retrofit
+#### OkHttp/Retrofit
 - [重拾Android之路之探究Retrofit 2.X](https://www.jianshu.com/p/5c0c546fc540)
 - [Content-Type](https://blog.csdn.net/bigtree_3721/article/details/82809459)
 
@@ -135,9 +150,16 @@ ButterKnife注入控件, RxBinding异步监听事件
 - [在RxJava2里面，对于网络请求应该用Single、Observable还是Flowable？](https://www.zhihu.com/question/62300736)
 - [RxJava全局Error处理](https://blog.csdn.net/mq2553299/article/details/82823565)
 
-### 其他优秀的框架
+#### 面向切面编程
+- [性能优化，还得看AspectJ](https://mp.weixin.qq.com/s/heBoKE2UqMgp4_zm_fciuA)
+- [关于android中使用AspectJ](https://www.jianshu.com/p/f577aec99e17)
+- [安卓AOP三剑客:APT,AspectJ,Javassist](https://www.jianshu.com/p/dca3e2c8608a)
+
+#### 界面适配
+- [一种极低成本的Android屏幕适配方式](https://mp.weixin.qq.com/s/d9QCoBP6kV9VSWvVldVVwA)
+- [JessYanCoding/AndroidAutoSize](https://github.com/JessYanCoding/AndroidAutoSizeJessYanCoding/AndroidAutoSize)
+
+### 其他优秀的可替代方案
 - [todo-mvp-rxjava](https://github.com/googlesamples/android-architecture/tree/todo-mvp-rxjava)
 - [MVPArms](https://github.com/JessYanCoding/MVPArms)
 - [MVP项目实践](https://juejin.im/entry/57d22b79a22b9d006c4720ee)
-- [简体中文](./readme.zh_cn.md)
--

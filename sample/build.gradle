@@ -35,10 +35,11 @@ dependencies {
     implementation "com.android.support:support-v4:$rootProject.ext.supportLibraryVersion"
     implementation "com.android.support:appcompat-v7:$rootProject.ext.supportLibraryVersion"
 
-    // amlzq support
-    implementation "com.amlzq.android:utils:$rootProject.ext.utilsVersion"
-    implementation "com.amlzq.android:ui:$rootProject.ext.uiVersion"
-    implementation "com.amlzq.android:log:$rootProject.ext.logVersion"
+    // amlzq support library
+    api "com.amlzq.android:log:${rootProject.ext.logVersion}"
+    api "com.amlzq.android:annotations:${rootProject.ext.annotationsVersion}"
+    api "com.amlzq.android:utils:${rootProject.ext.utilsVersion}"
+    api "com.amlzq.android:ui:${rootProject.ext.utilsVersion}"
 
     implementation project(':mvp')
 }
