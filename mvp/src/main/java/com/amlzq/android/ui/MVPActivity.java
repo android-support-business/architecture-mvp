@@ -1,11 +1,18 @@
-package com.amlzq.android.architecture.ui;
+package com.amlzq.android.ui;
 
 import android.os.Bundle;
 
 import com.amlzq.android.app.BaseActivity;
 import com.hwangjr.rxbus.RxBus;
 
-public class RxActivity extends BaseActivity {
+/**
+ * base mvp activity
+ * butter knife
+ * rxbus
+ * state view
+ *
+ */
+public abstract class MVPActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,5 +25,6 @@ public class RxActivity extends BaseActivity {
         super.onDestroy();
         RxBus.get().unregister(this);
     }
+
 
 }

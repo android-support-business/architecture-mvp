@@ -3,4 +3,4 @@
  *
  * @author amlzq
  */
-package com.amlzq.android.architecture.schedulers;
+package com.amlzq.android.schedulers;

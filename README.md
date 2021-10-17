@@ -1,8 +1,8 @@
-# android-support-mvp-plus
+# android-support-mvp+
 - [Take for android-architecture](https://github.com/googlesamples/android-architecture)
 
 ### 发布
-- 因为依赖太多第三方库，会导致频繁更新，所以不发布到jcenter。
+- 因为依赖较多第三方库，会导致频繁更新，暂不发布到jcenter。
 - 可发布到本地maven中，执行`gradlew uploadArchives`。
 
 ### 工程结构
@@ -15,7 +15,7 @@ package: com.amlzq.android.architecture
 > sample application
 ```
 package: com.amlzq.asb
-appName: MVP-Plus支持库
+appName: MVP+支持库
 applicationId: com.amlzq.asb.mvp.plus
 ```
 

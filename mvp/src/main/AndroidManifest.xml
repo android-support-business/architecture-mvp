@@ -3,7 +3,7 @@
     package="com.amlzq.android.architecture">
 
     <application>
-        <activity android:name=".ui.RxActivity" />
+        <activity android:name="com.amlzq.android.ui.MVPActivity" />
     </application>
 
 </manifest>

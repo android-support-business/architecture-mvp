@@ -111,7 +111,7 @@ uploadArchives {
     repositories.mavenDeployer {
         repository(url: properties.getProperty("mavenLocal"))
         pom.groupId = "com.amlzq.android"
-        pom.artifactId = "mvp-plus"
+        pom.artifactId = "mvp+"
         pom.version = android.defaultConfig.versionName
     }
 }

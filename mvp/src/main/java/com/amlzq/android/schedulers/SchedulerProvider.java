@@ -1,4 +1,4 @@
-package com.amlzq.android.architecture.schedulers;
+package com.amlzq.android.schedulers;
 
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;

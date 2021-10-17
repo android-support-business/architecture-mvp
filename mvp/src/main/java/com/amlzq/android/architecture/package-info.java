@@ -1,5 +1,5 @@
 /**
- * mvp-plus architecture blueprints
+ * mvp+ architecture blueprints
  *
  * @author amlzq
  */
